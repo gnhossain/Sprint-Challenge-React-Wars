@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import CharacterCard from "./CharacterCard";
 import axios from "axios";
+import styled from "styled-components";
 
 export default function CharacterList(){
     const[character, setCharacter] = useState([]);
@@ -22,7 +23,10 @@ export default function CharacterList(){
 
 return (
         <div className = "Wars">
-            <CharacterCard character={character}/>
+            {character.map(item => {
+          return <CharacterCard name={character.name} date={character.date} gender={character.gender}/>;
+        })}
+            {/* <CharacterCard character={character}/> */}
         </div>
     )
 }
