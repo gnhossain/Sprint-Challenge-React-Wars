@@ -6,3 +6,28 @@
   text-shadow: 1px 1px 5px #fff;
 }
 /* write your parent styles in here for your App.js */
+/* .Wars{
+  display: flex;
+  flex-wrap: wrap;
+  width:500px;
+  margin:auto;
+  box-sizing: border-box} */
+  
+*{
+  box-sizing: border-box
+}
+
+.Wars{
+  display:flex;
+  flex-wrap: wrap;
+  width: 900px;
+  margin:auto;
+}
+.card{
+  height: 150px;
+  width:400px;
+  background-color:wheat;
+  opacity: .5;
+  margin: 2%;
+  padding: 2%;
+}

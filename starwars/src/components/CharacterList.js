@@ -9,9 +9,9 @@ export default function CharacterList(){
 
     useEffect(() => {
     axios
-    .get('https://swapi.co/api/people')
+    .get('https://swapi.co/api/people/')
     .then (response => {
-        const character = response.data;
+        const character = response.data.results;
         console.log("Wars", character);
         setCharacter(character);
     })
@@ -24,7 +24,7 @@ export default function CharacterList(){
 return (
         <div className = "Wars">
             {character.map(item => {
-          return <CharacterCard name={character.name} date={character.date} gender={character.gender}/>;
+          return <CharacterCard name={item.name} hair_color={item.hair_color} gender={item.gender}/>;
         })}
             {/* <CharacterCard character={character}/> */}
         </div>
